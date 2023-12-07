@@ -1,0 +1,36 @@
+mqtt:
+  hostUrl: tcp://10.13.62.168:1883
+  username: admin
+  password: wanda@1234
+  client-id: IOT-EPC-Pj3413020010-byq-odbc
+  cleanSession: true
+  reconnect: true
+  keepAlive: 100
+  isOpen: true
+  qos: 1
+  sendtopic: project/gcId/report
+  setdownTopic: cloud/gcid/setdown
+
+spring:
+    #redis配置
+  redis:
+    host: 10.13.62.138
+    port: 16379
+    password:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.13.62.138:3306/zz_originaldata?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false&rewriteBatchedStatements=true&autoReconnect=true
+    username: pbsage
+    password: 123456
+
+server:
+  port: 9030
+#广场ID及GatewayId
+epc:
+  gatewayId: BYQ
+  gcId: 4501091000
+  tableId: 4501091001
+  subsystem: bpd/
+  threadNum: 1
+
+beanName: electricEpcDevice

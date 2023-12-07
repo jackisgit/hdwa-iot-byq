@@ -8,7 +8,8 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>iot_epc_byq</artifactId>
+    <artifactId>iot_epc_byq_odbc</artifactId>
+    <version>1.0.1-R20231207</version>    <!--    大的版本升级修改第一位;大的bug修复-修改第二位;小的bug修复修改第三位;-->
 
     <dependencies>
         <dependency>
@@ -49,10 +50,5 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
     </dependencies>
-
-
-    <build>
-        <finalName>IEPC_BYQ_ODBC</finalName>
-    </build>
 
 </project>
