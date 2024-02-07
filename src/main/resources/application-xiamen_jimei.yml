@@ -1,0 +1,36 @@
+mqtt:
+  hostUrl: tcp://10.47.17.180:1883
+  username: admin
+  password: public
+  client-id: IOT-EPC-Pj3502110010-BPD
+  cleanSession: true
+  reconnect: true
+  keepAlive: 100
+  isOpen: true
+  qos: 1
+  sendtopic: project/gcId/report
+  setdownTopic: cloud/gcid/setdown
+
+spring:
+    #redis配置
+  redis:
+    host: 127.0.0.1
+    port: 16379
+    password:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.47.17.12:3306/cloud_originaldata?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false&rewriteBatchedStatements=true&autoReconnect=true
+    username: guest
+    password: guest
+
+server:
+  port: 9030
+#广场ID及GatewayId
+epc:
+  gatewayId: BPD
+  gcId: 3502110010
+  tableId: 3502110001
+  subsystem: bpd/
+  threadNum: 1
+
+beanName: electricEpcDevice
